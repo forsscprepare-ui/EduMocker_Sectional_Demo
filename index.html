@@ -9,6 +9,28 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
 <style>
+
+  .q-image-wrap{
+  margin:12px 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.img-loader{
+  width:50px;
+  height:50px;
+  border:5px solid #ddd;
+  border-top:5px solid #2c5364;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+.q-image{
+  max-width:100%;
+  border-radius:12px;
+  display:none;
+}
 *{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
 body{margin:0;background:#f4f6f8;padding:0}
 .loader{height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
@@ -61,6 +83,13 @@ button:disabled{opacity:.4}
   <div class="container">
     <div class="q-inst">Choose the correct answer</div>
     <div class="question" id="question"></div>
+
+<div id="imgWrap" class="q-image-wrap hidden">
+  <div id="imgLoader" class="img-loader"></div>
+  <img id="qImg" class="q-image">
+</div>
+
+    
     <div id="options"></div>
 
     <div class="nav">
@@ -118,9 +147,11 @@ const user = {
 if(!user.phone){ alert("Login required"); throw ""; }
 
 const questions = [
- {q:"2 + 2 = ?", o:["1","2","3","4"], a:3},
- {q:"Capital of India?", o:["Delhi","Mumbai","Chennai","Kolkata"], a:0},
- {q:"5 × 3 = ?", o:["10","15","20","25"], a:1}
+{q:"2 + 2 = ?", o:["1","2","3","4"], a:3, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggu1XD9fRXeOuZENZTdFwN6Izg3-2TzAe1KF-l4LUba7dU-mX3YVhGNtGmzMSWbwGa3wZUHNUmUEana4BTfDaumN_9kegeqGlx7uiP0xUL7Sl82GoL2zQ8ahK9Nxw5xv0cWiGUxdcltKyiLJ1FT_qhckmrmdUnbWVqTA0MeWfXl0tDHTM5IUH8w98h5mdi/s1600/icons8-physics-book-100.png"},
+
+{q:"Capital of India?", o:["Delhi","Mumbai","Chennai","Kolkata"], a:0},
+
+{q:"5 × 3 = ?", o:["10","15","20","25"], a:1, img:"https://example.com/multiply.jpg"}
 ];
 
 let answers={}, index=0, timeLeft, timerInt;
@@ -145,20 +176,45 @@ function runTimer(){
 }
 
 function loadQ(){
-  const q=questions[index];
-  question.innerText=q.q;
+  const q = questions[index];
+  question.innerText = q.q;
+
+  /* ===== ADD THIS BLOCK (IMAGE LOGIC) ===== */
+  imgWrap.classList.add("hidden");
+  qImg.style.display = "none";
+  imgLoader.style.display = "block";
+
+  if(q.img){
+    imgWrap.classList.remove("hidden");
+    qImg.src = q.img;
+
+    qImg.onload = () => {
+      imgLoader.style.display = "none";
+      qImg.style.display = "block";
+    };
+
+    qImg.onerror = () => {
+      imgWrap.classList.add("hidden");
+    };
+  }
+  /* ===== END IMAGE LOGIC ===== */
+
   options.innerHTML="";
   q.o.forEach((t,i)=>{
     const d=document.createElement("div");
     d.className="option"+(answers[index]===i?" selected":"");
     d.innerText=t;
-    d.onclick=()=>{answers[index]=answers[index]===i?null:i;loadQ();updateGrid();};
+    d.onclick=()=>{
+      answers[index]=answers[index]===i?null:i;
+      loadQ();
+      updateGrid();
+    };
     options.appendChild(d);
   });
-  prevBtn.disabled=index===0;
-  nextBtn.disabled=index===questions.length-1;
-}
 
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === questions.length - 1;
+}
 function nextQ(){index++;loadQ();}
 function prevQ(){index--;loadQ();}
 
