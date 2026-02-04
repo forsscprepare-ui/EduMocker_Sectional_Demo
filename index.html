@@ -77,7 +77,7 @@ button:disabled{opacity:.4}
 
 <div id="test" class="hidden">
   <div class="header">
-    <b>EduMocker Demo Test</b>
+    <b>OSSC PYQ Prelims 23Jun, 2024</b>
     <span id="timer">15:00</span>
   </div>
   <div class="container">
@@ -104,7 +104,7 @@ button:disabled{opacity:.4}
 </div>
 
 <div id="score" class="hidden score">
-  <h3>EduMocker Demo Test</h3>
+  <h3>OSSC PYQ Prelims 23Jun, 2024</h3>
   <p id="userScore"></p>
   <div class="card" id="stats"></div>
 
@@ -129,13 +129,13 @@ button:disabled{opacity:.4}
 
 <script>
 firebase.initializeApp({
-  apiKey: "AIzaSyDC7bCtLbGiU-4ZEfXvLbzU0jXkeHUlgG4",
-  authDomain: "test-fdc3c.firebaseapp.com",
-  projectId: "test-fdc3c"
+  apiKey: "AIzaSyBskR7Iuvep9d2W4NoPMilS6jST7pCWFs8",
+  authDomain: "edumocker-pyq.firebaseapp.com",
+  projectId: "edumocker-pyq"
 });
 const db = firebase.firestore();
 
-const TEST_ID = "GK_Set_2";
+const TEST_ID = "OSSC_CGL_PYQ_Prelims_23_Jun_2024";
 const STORAGE_KEY = "RESULT_" + TEST_ID;
 const TEST_DURATION_MINUTES = 15;
 const NEGATIVE_MARK = 0.25;
@@ -147,11 +147,345 @@ const user = {
 if(!user.phone){ alert("Login required"); throw ""; }
 
 const questions = [
-{q:"2 + 2 = ?", o:["1","2","3","4"], a:3, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEggu1XD9fRXeOuZENZTdFwN6Izg3-2TzAe1KF-l4LUba7dU-mX3YVhGNtGmzMSWbwGa3wZUHNUmUEana4BTfDaumN_9kegeqGlx7uiP0xUL7Sl82GoL2zQ8ahK9Nxw5xv0cWiGUxdcltKyiLJ1FT_qhckmrmdUnbWVqTA0MeWfXl0tDHTM5IUH8w98h5mdi/s1600/icons8-physics-book-100.png"},
 
-{q:"Capital of India?", o:["Delhi","Mumbai","Chennai","Kolkata"], a:0},
 
-{q:"5 × 3 = ?", o:["10","15","20","25"], a:1, img:"https://example.com/multiply.jpg"}
+
+
+
+
+{q:"Where is India's largest <span style='font-weight:normal;'>facility for weightlifting coming up?</span>", o:["Ganjam","Imphal","New Delhi","Bhubaneswar"], a:3},
+
+{q:"Who won the Best Actress award at Cannes Film Festival  2024 for acting in film 'The Shameless'?", o:["Kani Kusruthi","Anasuya Sengupta","Divya Prabha","Chhaya Kadam"], a:1},
+
+{q:"Naomi Osaka returned to WTA Tour in January 2024 after a break. Why did she take the break?", o:["Injury","Mental health issues","Financial issues","Legal issues"], a:1},
+
+{q:"Ameen Sayani died in February 2024. In which field did he earn his fame?", o:["Radio announcement","Singing","TV Anchor","Film Director"], a:0},
+
+{q:"Manohar Joshi was Speaker of Lok Sabha during which period?", o:["2002 to 2004","2004 to 2006","2000 to 2002","1995 to 2000"], a:2},
+
+{q:"Who is the Solicitor General of India?", o:["Tushar Mehta","Ranjit Kumar","Mohan Parasaran","Gopal Subramanyam"], a:0},
+
+{q:"Who is the current Chairman of SEBI?", o:["Madhabi Puri Buch","V.K Sinha","Ajay Tyagi","C.B Bhave"], a:0},
+
+{q:"Who is the Chief of Army Staff in June 2024?", o:["General Manoj Pande","General Manoj M. Naravane","General Dalbir Singh Suhag","General Rakesh Kapoor"], a:0},
+
+{q:"Who is the President of Pakistan?", o:["Asif Ali Zardari","Imran Khan","Nawaz Sharif","Shahbaz Sharif"], a:0},
+
+{q:"Who was the Palestinian Prime Minister who resigned in February 2024?", o:["Mohammad Shtayyeh","Rami Hamdallan","Salam Fayyad","Yehia Sinwar"], a:0},
+
+{q:"Who is the new Prime Minister of Singapore?", o:["Lawrence Wong","Lee Kuan Yew","Goh Chok Tong","Lee Hsien Loong"], a:0},
+
+{q:"Alice Munro died in May 2024. In which field did she earn her fame?", o:["Literature","Acting","Painting","Politics"], a:0},
+
+{q:"Director of 'All We Imagine as Light' which won Grand Prix at Cannes 2024?", o:["Sanjay Leela Bhansali","Payal Kapadia","Mani Ratnam","Anurag Basu"], a:1},
+
+{q:"New laws replacing IPC, CrPC and IEA came into effect on:", o:["July 1 2024","June 1 2024","31 December 2024","1 January 2025"], a:0},
+
+{q:"Result of vote counting of which election was set aside by Supreme Court in Feb 2024?", o:["Mayor of Chandigarh","Rajya Sabha UP","MLA election","Rajya Sabha Himachal Pradesh"], a:0},
+
+{q:"Cyclone REMAL affected which country the most?", o:["Bangladesh","Myanmar","Thailand","Sri Lanka"], a:0},
+
+{q:"How many MLAs are elected to Odisha Legislative Assembly?", o:["137","147","157","142"], a:1},
+
+{q:"Who is the present Chief Minister of Goa?", o:["Pramod Sawant","Digambar Kamat","Laxmikant Parsekar","Francisco Sardinha"], a:0},
+
+{q:"Who is the Prime Minister of Slovakia attacked in May 2024?", o:["Peter Pellegrini","Robert Fico","Eduard Heger","Ludovit Odor"], a:1},
+
+{q:"Who is the Chairman of DRDO and Secretary DDR&D?", o:["Dr. Samir V. Kamat","Shri S. Christopher","Dr V.S Arunachalam","Dr G. Satheesh Reddy"], a:0},
+
+{q:"Who is the Director General of CSIR and Secretary DSIR?", o:["Dr. N Kalaiselvi","Dr R.A Mashelkar","Dr Sekhar C Mande","Dr Girish Sahani"], a:0},
+
+{q:"Which Covid vaccine maker admitted rare blood clot side effect in UK court?", o:["AstraZeneca / Covishield","Covaxin","Sputnik V","Janssen"], a:0},
+
+{q:"India's largest Lok Sabha constituency by voter population?", o:["Malkajgiri","Outer Delhi","Agra","Khurda"], a:0},
+
+{q:"Papua New Guinea disaster in May 2024 was:", o:["Cyclone","Flood","Landslide","Earthquake"], a:2},
+
+{q:"Indian women's team defeated whom to win Archery World Cup gold in Shanghai?", o:["Turkey","France","Italy","South Korea"], a:3},
+
+{q:"Age of Alejandra Rodriguez, Miss Universe Buenos Aires winner?", o:["27","45","60","25"], a:1},
+
+{q:"Late Amar Singh Chamkila earned fame in which field?", o:["Singing","Sports","Dance","Literature"], a:0},
+
+{q:"Odisha FC faced which team in ISL semifinal 2024?", o:["Mohun Bagan","Mumbai City","Kerala Blasters","Goa"], a:1},
+
+{q:"Who was the captain of KKR in IPL 2024?", o:["Shreyas Iyer","Andre Russell","Phil Salt","Varun Chakravarthy"], a:0},
+
+{q:"Who received Gyanpith Puraskar for 2023?", o:["Gulzar","Rambhadracharya","Both a & b","None"], a:2},
+
+{q:"India's top cargo handling port 2023–24?", o:["Paradeep Port","Kandla Port","Vizag Port","JNPA Port"], a:1},
+
+{q:"How many qualifying dates for voter registration are now in effect?", o:["2","3","4","5"], a:2},
+
+{q:"National Voters Day is celebrated on:", o:["24 January","25 January","26 January","26 February"], a:1},
+
+{q:"Senior citizens above what age can vote from home?", o:["80 years","85 years","75 years","82 years"], a:0},
+
+{q:"Which is NOT an approved ID document by ECI?", o:["PAN Card","Aadhaar Card","Credit Card","Driving License"], a:2},
+
+{q:"What percentage of polling booths are covered by webcasting?", o:["30%","40%","50%","60%"], a:2},
+
+{q:"Total electors of Odisha as on 28.04.2024?", o:["33236360","733646762","16850949","33236360"], a:0},
+
+{q:"General Election 2024 in Odisha held in how many phases?", o:["3","4","5","2"], a:1},
+
+{q:"Prime Minister of Greece who visited India in March 2024?", o:["Kyriakos Mitsotakis","Alexis Tsipras","Ioannis Sarmas","Kostis Hatzidakis"], a:0},
+
+{q:"KKR defeated which team in IPL 2024 final?", o:["Mumbai Indians","Sunrisers Hyderabad","RCB","Rajasthan Royals"], a:1},
+
+
+{q:"<span style='font-weight:normal;'>Directions (Q 41-45): Study the following information carefully and answer accordingly.Note: Use additional information given in any question or its answer for answering subsequent questions.</span><br><br>How many students study Geography or English?", 
+ o:["108","91","62","130"], 
+ a:3, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqLJ0bQNf5ksjv5BUbmpOzEy2icD1ikgPjQdaHaj5xywCtUjMIjbFX9BRA7Z6ljDOnbK1jnguGNr9c4r703zFloVjKH1mwtHbeslAi7FukD9j125h7QMdMjyeLPh9zoFWqlbEaQqbG1hAcb6i8BCBe0TcLCHGfqhFXgnCEde045TYizIlmT_WsFmIOA2zw/s332/Screenshot%202026-02-04%207.19.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 41-45): Study the following information carefully and answer accordingly.Note: Use additional information given in any question or its answer for answering subsequent questions.</span><br><br>If 32 students study only Geography, how many students study English?", 
+ o:["63","67","52","59"], 
+ a:1, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqLJ0bQNf5ksjv5BUbmpOzEy2icD1ikgPjQdaHaj5xywCtUjMIjbFX9BRA7Z6ljDOnbK1jnguGNr9c4r703zFloVjKH1mwtHbeslAi7FukD9j125h7QMdMjyeLPh9zoFWqlbEaQqbG1hAcb6i8BCBe0TcLCHGfqhFXgnCEde045TYizIlmT_WsFmIOA2zw/s332/Screenshot%202026-02-04%207.19.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 41-45): Study the following information carefully and answer accordingly.Note: Use additional information given in any question or its answer for answering subsequent questions.</span><br><br>How many students study Economics or Geography or both but not all three?", 
+ o:["28","90","68","54"], 
+ a:1, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqLJ0bQNf5ksjv5BUbmpOzEy2icD1ikgPjQdaHaj5xywCtUjMIjbFX9BRA7Z6ljDOnbK1jnguGNr9c4r703zFloVjKH1mwtHbeslAi7FukD9j125h7QMdMjyeLPh9zoFWqlbEaQqbG1hAcb6i8BCBe0TcLCHGfqhFXgnCEde045TYizIlmT_WsFmIOA2zw/s332/Screenshot%202026-02-04%207.19.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 41-45): Study the following information carefully and answer accordingly.Note: Use additional information given in any question or its answer for answering subsequent questions.</span><br><br>How many students study only Economics?", 
+ o:["15","16","17","18"], 
+ a:2, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqLJ0bQNf5ksjv5BUbmpOzEy2icD1ikgPjQdaHaj5xywCtUjMIjbFX9BRA7Z6ljDOnbK1jnguGNr9c4r703zFloVjKH1mwtHbeslAi7FukD9j125h7QMdMjyeLPh9zoFWqlbEaQqbG1hAcb6i8BCBe0TcLCHGfqhFXgnCEde045TYizIlmT_WsFmIOA2zw/s332/Screenshot%202026-02-04%207.19.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 41-45): Study the following information carefully and answer accordingly.Note: Use additional information given in any question or its answer for answering subsequent questions.</span><br><br>What is the total number of students enrolled for studying these three subjects, either one of them, two of them or all of them?", 
+ o:["120","130","123","132"], 
+ a:2, img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgqLJ0bQNf5ksjv5BUbmpOzEy2icD1ikgPjQdaHaj5xywCtUjMIjbFX9BRA7Z6ljDOnbK1jnguGNr9c4r703zFloVjKH1mwtHbeslAi7FukD9j125h7QMdMjyeLPh9zoFWqlbEaQqbG1hAcb6i8BCBe0TcLCHGfqhFXgnCEde045TYizIlmT_WsFmIOA2zw/s332/Screenshot%202026-02-04%207.19.47%20AM.png"},
+
+
+{q:"<span style='font-weight:normal;'>Directions (Q 46-50): Study the table given below and answer the following questions.<br>Note: Maiden over is one in which a bowler doesn't concede any run.</span><br><br>If the number of wickets taken by Asif is 16% of total number of wickets taken by all the remaining bowlers and he conceded 7 runs per over, then find his strike-rate. (Strike rate is defined as the no. of runs conceded per wicket)", 
+ o:["5.25","4.25","6.25","7.25"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXeiBzYhSTXrQBgF3KvdlL_7k_WGl6gxZV603OVXCKdeFpjJF5JxfvyHM72Ra92YBTMMOGPZWt9YkzauSWcYNc-P-yebNXT3-Y8728F_5dsll6pdZkUodJgQNg5P0avUdrNah-TL9p4k1cq1mz1J6-C42fuq-b3mKXX26cQeLZn7dUJ9pPIQZTZrfDaptB/s320/Screenshot%202026-02-04%207.34.38%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 46-50): Study the table given below and answer the following questions.<br>Note: Maiden over is one in which a bowler doesn't concede any run.</span><br><br>How many more maiden overs should Roch have bowled in order to equal the economy rate of Bond? (Economy rate is defined as the no. of runs conceded per over)", 
+ o:["4","6","2","8"], 
+ a:3, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXeiBzYhSTXrQBgF3KvdlL_7k_WGl6gxZV603OVXCKdeFpjJF5JxfvyHM72Ra92YBTMMOGPZWt9YkzauSWcYNc-P-yebNXT3-Y8728F_5dsll6pdZkUodJgQNg5P0avUdrNah-TL9p4k1cq1mz1J6-C42fuq-b3mKXX26cQeLZn7dUJ9pPIQZTZrfDaptB/s320/Screenshot%202026-02-04%207.34.38%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 46-50): Study the table given below and answer the following questions.<br>Note: Maiden over is one in which a bowler doesn't concede any run.</span><br><br>If Amir bowls a maiden for every 3 overs he bowls and concedes 33 1/3% more runs than Lee did, then find the ratio of his maidens per wicket to the runs conceded by him per over?", 
+ o:["5:71","3:71","3:80","5:81"], 
+ a:0, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXeiBzYhSTXrQBgF3KvdlL_7k_WGl6gxZV603OVXCKdeFpjJF5JxfvyHM72Ra92YBTMMOGPZWt9YkzauSWcYNc-P-yebNXT3-Y8728F_5dsll6pdZkUodJgQNg5P0avUdrNah-TL9p4k1cq1mz1J6-C42fuq-b3mKXX26cQeLZn7dUJ9pPIQZTZrfDaptB/s320/Screenshot%202026-02-04%207.34.38%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 46-50): Study the table given below and answer the following questions.<br>Note: Maiden over is one in which a bowler doesn't concede any run.</span><br><br>If Lee and Steyn collectively bowled 36 overs and conceded 280 runs, then find the ratio of their strike rates. (Use information from previous questions if needed)", 
+ o:["2:1","1:1","3:1","1:4"], 
+ a:1, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXeiBzYhSTXrQBgF3KvdlL_7k_WGl6gxZV603OVXCKdeFpjJF5JxfvyHM72Ra92YBTMMOGPZWt9YkzauSWcYNc-P-yebNXT3-Y8728F_5dsll6pdZkUodJgQNg5P0avUdrNah-TL9p4k1cq1mz1J6-C42fuq-b3mKXX26cQeLZn7dUJ9pPIQZTZrfDaptB/s320/Screenshot%202026-02-04%207.34.38%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 46-50): Study the table given below and answer the following questions.<br>Note: Maiden over is one in which a bowler doesn't concede any run.</span><br><br>Strike-rate of Amir is what percentage of the economy rate of Roch? (Use information from previous questions if needed)", 
+ o:["90%","83.33%","85.25%","88.75%"], 
+ a:1, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhXeiBzYhSTXrQBgF3KvdlL_7k_WGl6gxZV603OVXCKdeFpjJF5JxfvyHM72Ra92YBTMMOGPZWt9YkzauSWcYNc-P-yebNXT3-Y8728F_5dsll6pdZkUodJgQNg5P0avUdrNah-TL9p4k1cq1mz1J6-C42fuq-b3mKXX26cQeLZn7dUJ9pPIQZTZrfDaptB/s320/Screenshot%202026-02-04%207.34.38%20AM.png"},
+
+
+
+
+
+{q:"<span style='font-weight:normal;'>Directions (Q 51-55): Read the given data carefully and answer the given questions. The table shows efficiency ratios (Man:Woman:Child) and total time taken by a child to complete the work.</span><br><br>What is the time taken to complete work A by 3 men, 2 women and 1 child together?", 
+ o:["More than 4 days","More than 5 days","More than 3 days","More than 6 days"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9cxPTZtnNUUAFXuUs0zs7EMq6UGcREQp9JPXXH6tcSyhsLnz8b_hgKgeNkRYYMR1VNS-J_QzoB-FyUNTx9Nprlle8RK5UrKGAKi0JwqCYMeVibMyLU2at92D1odJUdkugGqQ2DwShnXjAqFNJiJRJqdc3ml03UBnLjbjhMmhLx90aaFvq1macWoMLGzUG/s320/Screenshot%202026-02-04%207.39.27%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 51-55): Read the given data carefully and answer the given questions. The table shows efficiency ratios (Man:Woman:Child) and total time taken by a child to complete the work.</span><br><br>What is the time taken by a Man to complete Work B?", 
+ o:["4 days","10 days","5 days","6 days"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9cxPTZtnNUUAFXuUs0zs7EMq6UGcREQp9JPXXH6tcSyhsLnz8b_hgKgeNkRYYMR1VNS-J_QzoB-FyUNTx9Nprlle8RK5UrKGAKi0JwqCYMeVibMyLU2at92D1odJUdkugGqQ2DwShnXjAqFNJiJRJqdc3ml03UBnLjbjhMmhLx90aaFvq1macWoMLGzUG/s320/Screenshot%202026-02-04%207.39.27%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 51-55): Read the given data carefully and answer the given questions. The table shows efficiency ratios (Man:Woman:Child) and total time taken by a child to complete the work.</span><br><br>In how many days can 2 men, 3 women and 3 children complete work D?", 
+ o:["6 days","4 days","3 days","1 day"], 
+ a:3, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9cxPTZtnNUUAFXuUs0zs7EMq6UGcREQp9JPXXH6tcSyhsLnz8b_hgKgeNkRYYMR1VNS-J_QzoB-FyUNTx9Nprlle8RK5UrKGAKi0JwqCYMeVibMyLU2at92D1odJUdkugGqQ2DwShnXjAqFNJiJRJqdc3ml03UBnLjbjhMmhLx90aaFvq1macWoMLGzUG/s320/Screenshot%202026-02-04%207.39.27%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 51-55): Read the given data carefully and answer the given questions. The table shows efficiency ratios (Man:Woman:Child) and total time taken by a child to complete the work.</span><br><br>Out of works A, B, C, D, which work a man takes most days to complete?", 
+ o:["A","B","C","D"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9cxPTZtnNUUAFXuUs0zs7EMq6UGcREQp9JPXXH6tcSyhsLnz8b_hgKgeNkRYYMR1VNS-J_QzoB-FyUNTx9Nprlle8RK5UrKGAKi0JwqCYMeVibMyLU2at92D1odJUdkugGqQ2DwShnXjAqFNJiJRJqdc3ml03UBnLjbjhMmhLx90aaFvq1macWoMLGzUG/s320/Screenshot%202026-02-04%207.39.27%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 51-55): Read the given data carefully and answer the given questions. The table shows efficiency ratios (Man:Woman:Child) and total time taken by a child to complete the work.</span><br><br>One Man, One Woman and One Child working together get 1200 Rs in total for completing work A and 600 Rs for completing work D. What is the amount received by a child for completing both works (in Rupees)?", 
+ o:["200","300","400","500"], 
+ a:3, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg9cxPTZtnNUUAFXuUs0zs7EMq6UGcREQp9JPXXH6tcSyhsLnz8b_hgKgeNkRYYMR1VNS-J_QzoB-FyUNTx9Nprlle8RK5UrKGAKi0JwqCYMeVibMyLU2at92D1odJUdkugGqQ2DwShnXjAqFNJiJRJqdc3ml03UBnLjbjhMmhLx90aaFvq1macWoMLGzUG/s320/Screenshot%202026-02-04%207.39.27%20AM.png"},
+
+
+
+
+
+
+
+    {q:"<span style='font-weight:normal;'>Directions (Q. 56-60): Study the given information and answer the following questions regarding vehicle profits and rides.<br><br>There are three types of vehicles i.e., 3 Auto, 4 Car and one Truck which take rides every day. Distance covered by each type of vehicle per ride is same. Profit per ride of an Auto and a Car is given as Rs 20 and Rs 60 respectively and total profit of Truck in April month is given as Rs 4200. Ratio of total ride per day of an Auto to total ride per day of a Car is 3:2. Ratio of per ride profit of a Truck to per ride profit of a Car is 70:30 and total profit is given as Rs 15980 per day.</span><br><br>What is the difference in profit earned by all Cars and Truck in one day?", 
+ o:["Rs 13,660","Rs 12,120","Rs 14,120","Rs 11,380"], 
+ a:2, 
+ img:""},
+
+{q:"<span style='font-weight:normal;'>Directions (Q. 56-60): Study the given information and answer the following questions regarding vehicle profits and rides.<br><br>There are three types of vehicles i.e., 3 Auto, 4 Car and one Truck which take rides every day. Distance covered by each type of vehicle per ride is same. Profit per ride of an Auto and a Car is given as Rs 20 and Rs 60 respectively and total profit of Truck in April month is given as Rs 4200. Ratio of total ride per day of an Auto to total ride per day of a Car is 3:2. Ratio of per ride profit of a Truck to per ride profit of a Car is 70:30 and total profit is given as Rs 15980 per day.</span><br><br>What is the ratio of profit earned by a Car in a day to that earned by an Auto in a day?", 
+ o:["11:9","2:1","8:9","13:9"], 
+ a:1, 
+ img:""},
+
+{q:"<span style='font-weight:normal;'>Directions (Q. 56-60): Study the given information and answer the following questions regarding vehicle profits and rides.<br><br>There are three types of vehicles i.e., 3 Auto, 4 Car and one Truck which take rides every day. Distance covered by each type of vehicle per ride is same. Profit per ride of an Auto and a Car is given as Rs 20 and Rs 60 respectively and total profit of Truck in April month is given as Rs 4200. Ratio of total ride per day of an Auto to total ride per day of a Car is 3:2. Ratio of per ride profit of a Truck to per ride profit of a Car is 70:30 and total profit is given as Rs 15980 per day.</span><br><br>What is the total profit of a single Car, Truck and Auto in a day?", 
+ o:["Rs 4860","Rs 4460","Rs 4240","Rs 5620"], 
+ a:2, 
+ img:""},
+
+{q:"<span style='font-weight:normal;'>Directions (Q. 56-60): Study the given information and answer the following questions regarding vehicle profits and rides.<br><br>There are three types of vehicles i.e., 3 Auto, 4 Car and one Truck which take rides every day. Distance covered by each type of vehicle per ride is same. Profit per ride of an Auto and a Car is given as Rs 20 and Rs 60 respectively and total profit of Truck in April month is given as Rs 4200. Ratio of total ride per day of an Auto to total ride per day of a Car is 3:2. Ratio of per ride profit of a Truck to per ride profit of a Car is 70:30 and total profit is given as Rs 15980 per day.</span><br><br>What is the contribution of Cars (approximately) to the total income per day in percentage?", 
+ o:["68%","72%","75%","82%"], 
+ a:2, 
+ img:""},
+
+{q:"<span style='font-weight:normal;'>Directions (Q. 56-60): Study the given information and answer the following questions regarding vehicle profits and rides.<br><br>There are three types of vehicles i.e., 3 Auto, 4 Car and one Truck which take rides every day. Distance covered by each type of vehicle per ride is same. Profit per ride of an Auto and a Car is given as Rs 20 and Rs 60 respectively and total profit of Truck in April month is given as Rs 4200. Ratio of total ride per day of an Auto to total ride per day of a Car is 3:2. Ratio of per ride profit of a Truck to per ride profit of a Car is 70:30 and total profit is given as Rs 15980 per day.</span><br><br>What is the total profit earned by all the Autos in the month of April?", 
+ o:["192,600","162,900","129,600","169,200"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"},
+
+
+
+{q:"<span style='font-weight:normal;'>Directions (Q 61-65): The following bar graph shows the Income and Expenditures (in lakhs) of five companies in the year 2001.</span><br><br>What was the percentage profit/loss of the companies M and N taken together?", 
+ o:["12% loss.","10% loss.","10% profit.","There was no loss or profit."], 
+ a:3, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 61-65): The following bar graph shows the Income and Expenditures (in lakhs) of five companies in the year 2001.</span><br><br>In 2001, what was the approximate percentage of profit/loss of all the five Companies taken together?", 
+ o:["4.65% profit.","6.5% profit.","4% loss.","7% loss."], 
+ a:0, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 61-65): The following bar graph shows the Income and Expenditures (in lakhs) of five companies in the year 2001.</span><br><br>Which company earned the maximum percentage profit in the year 2001?", 
+ o:["M","N","Q","P"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 61-65): The following bar graph shows the Income and Expenditures (in lakhs) of five companies in the year 2001.</span><br><br>For the Company R, if the expenditure had increased by 50% in year 2001 from year 2000 and the income increased by 25% in year 2001 from year 2000, then what was the profit percentage in the year 2000?", 
+ o:["10%","20%","25%","30%"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 61-65): The following bar graph shows the Income and Expenditures (in lakhs) of five companies in the year 2001.</span><br><br>If the income of the Company Q in 2000 was 10% less than its income in 2001 and the Company had earned a profit of 10 Lakhs in 2000, then what was its expenditure in 2000 (in Lakhs)?", 
+ o:["28","30","35","26"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJAwMTZnqRhcH4bQI1GIAakNPsUrjQUyzbPGrZ0FQljVcjVtCCar2-I3imc68jTJvr-gfZY7dJhu68Hw44K6SL4r8W0YtTNZzQovpxwdB5gE-mAsNc_u9xARot7S1oyE_ruvsQIEI7VbVBHIEjVA5n4D8o9LVDpwhRJ-3Xrpbsp37jEj-JXqY3sW7W_K8/s320/Screenshot%202026-02-04%207.48.15%20AM.png"}  ,
+
+
+
+    {q:"<span style='font-weight:normal;'>Directions (Q 66-70): The following table gives the percentage distribution of population of five states (P, Q, R, S, T) based on poverty line and gender.</span><br><br>If the male population below poverty line for the state R is 4 million, then what is the total population of the state R?", 
+ o:["40 million.","48 million.","50 million.","60 million."], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVTC5AnOIthUp5th7xAyKnKXeCe-yxnzmiwDorv3y1Z9ueIdzMZF_PPiH77T918jeqxjo-SJiAlbP9O7rb0Pzb6OL-IwfBj85ghz1yu0XoGoGfJqdCQwAcwh70P4TU2MkJiJKG2GV60diW4O1Qn094sqjPFB3EenFkF7kXxP_4R_DwuaUcag1lfWREYz2M/s320/Screenshot%202026-02-04%208.00.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 66-70): The following table gives the percentage distribution of population of five states (P, Q, R, S, T) based on poverty line and gender.</span><br><br>What will be the number of females above the poverty line in the state S, if it is known that the population of the state S is 100 million?", 
+ o:["57 million.","45 million.","36 million.","48 million."], 
+ a:1, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVTC5AnOIthUp5th7xAyKnKXeCe-yxnzmiwDorv3y1Z9ueIdzMZF_PPiH77T918jeqxjo-SJiAlbP9O7rb0Pzb6OL-IwfBj85ghz1yu0XoGoGfJqdCQwAcwh70P4TU2MkJiJKG2GV60diW4O1Qn094sqjPFB3EenFkF7kXxP_4R_DwuaUcag1lfWREYz2M/s320/Screenshot%202026-02-04%208.00.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 66-70): The following table gives the percentage distribution of population of five states (P, Q, R, S, T) based on poverty line and gender.</span><br><br>If the population of males below poverty line for the state Q is 2.4 million and that for the state T is 6 million, then what is the ratio of the total populations of the states Q and T?", 
+ o:["1:3","2:5","3:7","4:9"], 
+ a:1, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVTC5AnOIthUp5th7xAyKnKXeCe-yxnzmiwDorv3y1Z9ueIdzMZF_PPiH77T918jeqxjo-SJiAlbP9O7rb0Pzb6OL-IwfBj85ghz1yu0XoGoGfJqdCQwAcwh70P4TU2MkJiJKG2GV60diW4O1Qn094sqjPFB3EenFkF7kXxP_4R_DwuaUcag1lfWREYz2M/s320/Screenshot%202026-02-04%208.00.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 66-70): The following table gives the percentage distribution of population of five states (P, Q, R, S, T) based on poverty line and gender.</span><br><br>If the male population above poverty line for the state P is 12 million, then what is the total population of the state P?", 
+ o:["40 million","50 million","60 million","70 million"], 
+ a:1, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVTC5AnOIthUp5th7xAyKnKXeCe-yxnzmiwDorv3y1Z9ueIdzMZF_PPiH77T918jeqxjo-SJiAlbP9O7rb0Pzb6OL-IwfBj85ghz1yu0XoGoGfJqdCQwAcwh70P4TU2MkJiJKG2GV60diW4O1Qn094sqjPFB3EenFkF7kXxP_4R_DwuaUcag1lfWREYz2M/s320/Screenshot%202026-02-04%208.00.47%20AM.png"},
+
+{q:"<span style='font-weight:normal;'>Directions (Q 66-70): The following table gives the percentage distribution of population of five states (P, Q, R, S, T) based on poverty line and gender.</span><br><br>Using the answers obtained from above four questions, calculate the ratio of total population of P to the total population of R?", 
+ o:["3:5","5:4","1:1","6:7"], 
+ a:2, 
+ img:"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVTC5AnOIthUp5th7xAyKnKXeCe-yxnzmiwDorv3y1Z9ueIdzMZF_PPiH77T918jeqxjo-SJiAlbP9O7rb0Pzb6OL-IwfBj85ghz1yu0XoGoGfJqdCQwAcwh70P4TU2MkJiJKG2GV60diW4O1Qn094sqjPFB3EenFkF7kXxP_4R_DwuaUcag1lfWREYz2M/s320/Screenshot%202026-02-04%208.00.47%20AM.png"},
+
+
+ {q:"IPv4 address is:", o:["8 bit","16 bit","32 bit","64 bit"], a:2},
+
+{q:"Which of the following is used to create or design a web page?", o:["HTML","HTTP","PPP","WWW"], a:0},
+
+{q:"An identifier that sends and receives information across the Internet is called:", o:["IP address","www","Network","URL"], a:0},
+
+{q:"What is the full form of NIC?", o:["Network Interconnection Card","Network Internet Card","Network Interface Card","Network Intra Card"], a:2},
+
+{q:"Which view allows to modify table's structure in Access?", o:["Design view","Datasheet view","Pivot table view","Pivot Chart view"], a:0},
+
+{q:"Which key stroke moves the active cell towards left in Access table?", o:["F2","F5","Tab","Shift + Tab"], a:3},
+
+{q:"Which combination of key zooms the content of active cell in Access table?", o:["Ctrl + F2","Ctrl + F5","Shift + F2","Shift + F5"], a:2},
+
+{q:"In MS Access, form dialog may be created using which menu?", o:["Create > More Forms > Form Wizard","Create > More Forms > Data Sheet","Create > More Forms > Modal Dialog","Create Blank Form"], a:2},
+
+{q:"To open the existing presentation, press:", o:["Ctrl + L","Ctrl + N","Ctrl + A","Ctrl + O"], a:3},
+
+{q:"The file that consists of readymade styles used for presentation is known as:", o:["Pre formatting","Template","Wizard","AutoStyle"], a:1},
+
+{q:"In Microsoft PowerPoint, to see all slides on one screen use:", o:["View Slide Sorter","View Slide","View Master","View Slide Show"], a:0},
+
+{q:"Which is the menu command to recolor a picture on a slide?", o:["Insert → Picture → Recolor","Tools → Picture → Recolor","Format → Picture → Recolor","Edit → Picture → Recolor"], a:2},
+
+{q:"How can you update the values of formula cells if Auto Calculate mode of Excel is disabled?", o:["F8","F9","F10","F11"], a:1},
+
+{q:"You can convert existing Excel worksheet data and charts to an HTML document by using:", o:["FTP wizard","Internet Assistant wizard","Intranet wizard","Import wizard"], a:1},
+
+{q:"What is the shortcut key to highlight the entire column in Excel?", o:["Ctrl + C","Ctrl + Enter","Ctrl + Page Up","Ctrl + Space Bar"], a:3},
+
+{q:"Which of the following is an example of Page Orientation?", o:["Landscape","Subscript","Superscript","A4"], a:0},
+
+{q:"You can select all the text in an MS Word document by:", o:["Ctrl + S","Ctrl + A","Ctrl + V","Ctrl + 1"], a:1},
+
+{q:"How can you apply exactly the same formatting to another text in MS Word?", o:["Copy and paste then retype text","Paste Special","Use Format Painter","All of the above"], a:2},
+
+{q:"To use keyboard instead of mouse to select tools on the ribbon, KeyTips appear by pressing:", o:["Alt","Ctrl","Shift + Enter","Alt + Enter"], a:0},
+
+{q:"If you need to change the typeface of a document, which menu will you choose?", o:["Edit","View","Format","Tools"], a:2},   
+
+{q:"What is the value of the following expression? <br> [26+ {42 x(23 +2 - (2 x(5 x80-100)) + 16-4}]?", o:["-434","434","-443","-453"], a:0},
+
+{q:"What is the number when multiplied by 16 increases by 540?", o:["30","36","42","46"], a:1},
+
+{q:"What is the difference in the place value of 5 in the numeral 754853?", o:["45000","49950","49500","49940"], a:1},
+
+{q:"If two-third of three-fourth of a number is 34, then what is the value of 20% of that number?", o:["13","13.6","14","14.6"], a:1},
+
+{q:"The approximate value of the given expression is:", o:["0.16","0.20","0.38","0.46"], a:1},
+
+{q:"The population of a town is decreasing at a rate of 10% per annum. If the population 2 years ago was 20,000, then what is the present population?", o:["15,000","15,200","16,000","16,200"], a:3},
+
+{q:"Anil's salary was Rs.18,000. An increase of 20% each in two consecutive years is equal to a single increment of what percentage?", o:["22%","32%","40%","44%"], a:3},
+
+{q:"A certain amount of money was invested on simple interest for 2 years. If invested at 4% higher rate, it would fetch Rs.480 more. What is the amount invested?", o:["Rs.6,500","Rs.6,000","Rs.5,600","Rs.5,300"], a:1},
+
+{q:"On lending a sum on compound interest, one gets Rs.9050 in 2 years and Rs.9500 in 3 years. What is the rate of interest approximately?", o:["6%","5.5%","5%","4.5%"], a:2},
+
+{q:"X's and Y's shares in a business are in the ratio 5:3. X invested Rs.70,000 for 12 months. For what period did Y invest Rs.60,000?", o:["6.4 months","7.4 months","8.4 months","9.4 months"], a:2},
+
+{q:"The sum of present ages of a mother and her son is 60 years. Six years ago, mother's age was five times the son's age. What will be the son's age after 6 years?", o:["23 years","22 years","21 years","20 years"], a:3},
+
+{q:"The day on a certain date in April will be the same day on which month of the same year?", o:["June","July","August","October"], a:1},
+
+{q:"How many times do the hands of a clock coincide in a day?", o:["24","23","22","21"], a:2},
+
+{q:"Sachin scored a century including 3 fours and 8 sixes. What percentage of his score was made by running between the wickets?", o:["40","45","50","55"], a:0},
+
+{q:"A pipe fills a tank in 6 hours and another empties it in 12 hours. If both are opened together, how long will it take to fill the tank?", o:["10 hours","12 hours","14 hours","16 hours"], a:1},
+
+{q:"A man purchases a TV for Rs.8,000 and sells it at 10% loss. What is the selling price?", o:["Rs.7,200","Rs.7,000","Rs.6,900","Rs.6,500"], a:0},
+
+{q:"A train moving at a certain speed has a length of 150 m. How long will it take to cross a platform of 100 m?", o:["7.5 seconds","10 seconds","20 seconds","25 seconds"], a:0},
+
+{q:"P can do a job in 12 days and Q in 10 days. With help of R they finish in 4 days. In how many days can R alone do it?", o:["12 days","13 days","14 days","15 days"], a:3},
+
+{q:"A shopkeeper mixes 60 kg sugar at Rs.30/kg with 90 kg sugar at Rs.40/kg. At what rate must he sell the mixture to gain 20%?", o:["Rs.30/kg","Rs.34/kg","Rs.38/kg","Rs.43.2/kg"], a:3},
+
+{q:"If a blanket shrinks 20% in length and 15% in breadth, what is the percentage decrease in area?", o:["32%","35%","42%","45%"], a:0},
+
+{q:"A bag contains Rs.410 in Rs.5, Rs.2 and Re.1 coins in ratio 4:6:9. How many Rs.2 coins are there?", o:["40","50","60","70"], a:2},
+
+{q:"In a 100 m race, P finishes in 36 s and Q in 45 s. By how many meters does P beat Q?", o:["9 meters","20 meters","22.5 meters","25 meters"], a:1},
+
+{q:"How many numbers from 1 to 20 are multiples of 3 or 5?", o:["9","8","6","5"], a:0},
+
+{q:"What is the length of the longest rod that can be placed in a room of dimensions 30 m × 24 m × 18 m?", o:["30 meters","15√2 meters","30√2 meters","60 meters"], a:2},
+
+{q:"The numerator of a fraction is 3 less than the denominator. If the numerator is tripled and 20 added to the denominator, the fraction becomes 1/8. What is the fraction?", o:["1/4","2/5","5/8","4/7"], a:0}
+
+    
 ];
 
 let answers={}, index=0, timeLeft, timerInt;
@@ -177,7 +511,7 @@ function runTimer(){
 
 function loadQ(){
   const q = questions[index];
-  question.innerText = q.q;
+question.innerHTML = (index + 1) + ". " + q.q;
 
   /* ===== ADD THIS BLOCK (IMAGE LOGIC) ===== */
   imgWrap.classList.add("hidden");
